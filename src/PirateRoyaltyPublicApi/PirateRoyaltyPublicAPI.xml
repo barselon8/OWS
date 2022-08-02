@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PirateRoyaltyPublicApi</name>
+    </assembly>
+    <members>
+        <member name="M:PirateRoyaltyPublicApi.Controllers.UsersController.UpdateCharacterMeshAndHair(PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest)">
+            <summary>
+            Update Character Mesh
+            </summary>
+            <remarks>
+            Updates Character Mesh by Name and requires valid user session guid.
+            </remarks>
+            <param name="request">
+            <b>CustomerGUID</b> - This is the API key.<br/>
+            <b>UserSessionGUID</b> - This is a valid UserSessionGUID that contains CharacterName we need to update.<br/>
+            <b>CharacterName</b> - This is the name of the character to update.<br/>
+            <b>Mesh</b> - This is the mesh value we need to update.
+            <b>Hair</b> - This is the hair value we need to update.
+            </param>
+        </member>
+        <member name="M:PirateRoyaltyPublicApi.Controllers.UsersController.GetCosmeticCharacterData(PirateRoyaltyPublicApi.Requests.Users.GetCosmeticCharacterDataRequest)">
+            <summary>
+            Get Cosmetic Character Data
+            </summary>
+            <remarks>
+            Gets Cosmetic Character Data
+            </remarks>
+            <param name="request">
+            <b>CustomerGUID</b> - This is the API key.<br/>
+            <b>UserSessionGUID</b> - This is a valid UserSessionGUID that contains CharacterName we need to update.<br/>
+            <b>CharacterName</b> - This is the name of the character we are trying to get the data out of.<br/>
+            </param>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.GetCosmeticCharacterDataRequest.UserSessionGUID">
+            <summary>
+            User Session GUID
+            </summary>
+            <remarks>
+            This is a valid UserSessionGUID that contains CharacterName we need to update.
+            </remarks>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.GetCosmeticCharacterDataRequest.CharacterName">
+            <summary>
+            Character Name
+            </summary>
+            <remarks>
+            This is the name of the character to get Custom Data fields for.
+            </remarks>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.UserSessionGUID">
+            <summary>
+            User Session GUID
+            </summary>
+            <remarks>
+            This is a valid UserSessionGUID that contains CharacterName we need to update.
+            </remarks>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.CharacterName">
+            <summary>
+            Character Name
+            </summary>
+            <remarks>
+            This is the name of the character to update.
+            </remarks>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.Mesh">
+            <summary>
+            Mesh
+            </summary>
+            <remarks>
+            This is the mesh value we need to update.
+            </remarks>
+        </member>
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.Hair">
+            <summary>
+            Hair
+            </summary>
+            <remarks>
+            This is the hair value we need to update.
+            </remarks>
+        </member>
+    </members>
+</doc>

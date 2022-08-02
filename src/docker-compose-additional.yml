@@ -1,1 +1,24 @@
 version: '3.7'
+
+services:
+
+# Pirate Royalty Public API
+  pirateroyaltypublicapi:
+    image: ${REGISTRY:-ows}/pirateroyaltypublicapi:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: PirateRoyaltyPublicAPI/Dockerfile
+    environment:
+     - ASPNETCORE_ENVIRONMENT=Development
+     - ASPNETCORE_URLS=https://+:443;http://+:80
+     - OWSStorageConfig__OWSDBBackend=${DATABASE}
+     - OWSStorageConfig__OWSDBConnectionString=${DATABASE_CONNECTION_STRING}
+     - OWSAPIPathConfig__InternalPublicApiURL=${InternalPublicApiURL}
+     - OWSAPIPathConfig__InternalInstanceManagementApiURL=${InternalInstanceManagementApiURL}
+     - OWSAPIPathConfig__InternalCharacterPersistenceApiURL=${InternalCharacterPersistenceApiURL}
+    ports:
+      - "44340:80"
+      - "44341:443"
+    depends_on:
+      - database
+      - messaging
