@@ -5,8 +5,6 @@ WHERE OWSDBVersion IS NOT NULL;
 SELECT OWSDBVersion
 FROM OWSVersion;
 
-DELIMITER //
-
 CREATE OR REPLACE PROCEDURE AddNewCustomer(IN _CustomerName VARCHAR(50), IN _FirstName VARCHAR(50),
                                                IN _LastName VARCHAR(50), IN _Email VARCHAR(256),
                                                IN _Password VARCHAR(256), IN _CustomerGUID VARCHAR(36))
@@ -182,5 +180,3 @@ BEGIN
         SELECT 'Customer with specified GUID already exists.';
     END IF;
 END;
-
-// DELIMITER ;
