@@ -94,9 +94,6 @@ namespace PirateRoyaltyPublicApi
             services.Configure<OWSShared.Options.APIPathOptions>(Configuration.GetSection(OWSShared.Options.APIPathOptions.SectionName));
             services.Configure<OWSData.Models.StorageOptions>(Configuration.GetSection(OWSData.Models.StorageOptions.SectionName));
 
-
-            services.AddCustomHealthCheck(Configuration);
-
             InitializeContainer(services);
         }
 
@@ -117,8 +114,6 @@ namespace PirateRoyaltyPublicApi
             }
 
             app.UseRouting();
-
-            app.UseCustomHealthCheck();
 
             app.UseMvc();
 

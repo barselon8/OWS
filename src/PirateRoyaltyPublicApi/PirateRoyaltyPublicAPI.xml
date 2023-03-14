@@ -9,27 +9,13 @@
             Update Character Mesh
             </summary>
             <remarks>
-            Updates Character Mesh by Name and requires valid user session guid.
+            Updates cosmetic character data by Name and requires valid user session guid.
             </remarks>
             <param name="request">
             <b>CustomerGUID</b> - This is the API key.<br/>
             <b>UserSessionGUID</b> - This is a valid UserSessionGUID that contains CharacterName we need to update.<br/>
             <b>CharacterName</b> - This is the name of the character to update.<br/>
-            <b>Mesh</b> - This is the mesh value we need to update.
-            <b>Hair</b> - This is the hair value we need to update.
-            </param>
-        </member>
-        <member name="M:PirateRoyaltyPublicApi.Controllers.UsersController.GetCosmeticCharacterData(PirateRoyaltyPublicApi.Requests.Users.GetCosmeticCharacterDataRequest)">
-            <summary>
-            Get Cosmetic Character Data
-            </summary>
-            <remarks>
-            Gets Cosmetic Character Data
-            </remarks>
-            <param name="request">
-            <b>CustomerGUID</b> - This is the API key.<br/>
-            <b>UserSessionGUID</b> - This is a valid UserSessionGUID that contains CharacterName we need to update.<br/>
-            <b>CharacterName</b> - This is the name of the character we are trying to get the data out of.<br/>
+            <b>CosmeticCharacterData</b> - This is the cosmetic character data we need to update.
             </param>
         </member>
         <member name="P:PirateRoyaltyPublicApi.Requests.Users.GetCosmeticCharacterDataRequest.UserSessionGUID">
@@ -64,20 +50,12 @@
             This is the name of the character to update.
             </remarks>
         </member>
-        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.Mesh">
+        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.CosmeticCharacterData">
             <summary>
             Mesh
             </summary>
             <remarks>
             This is the mesh value we need to update.
-            </remarks>
-        </member>
-        <member name="P:PirateRoyaltyPublicApi.Requests.Users.UpdateCharacterMeshRequest.Hair">
-            <summary>
-            Hair
-            </summary>
-            <remarks>
-            This is the hair value we need to update.
             </remarks>
         </member>
     </members>

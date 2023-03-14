@@ -31,14 +31,7 @@ namespace PirateRoyaltyPublicApi.Requests.Users
             /// <remarks>
             /// This is the mesh value we need to update.
             /// </remarks>
-            public string Mesh { get; set; }
-            /// <summary>
-            /// Hair
-            /// </summary>
-            /// <remarks>
-            /// This is the hair value we need to update.
-            /// </remarks>
-            public string Hair { get; set; }
+            public string CosmeticCharacterData { get; set; }
 
             private SuccessAndErrorMessage output;
             private Guid customerGUID;
@@ -76,25 +69,14 @@ namespace PirateRoyaltyPublicApi.Requests.Users
 
             output = new SuccessAndErrorMessage();
 
-            AddOrUpdateCustomCharacterData addOrUpdateCustomCharacterDataMesh = new AddOrUpdateCustomCharacterData()
+            AddOrUpdateCustomCharacterData addOrUpdateCustomCharacterDataCosmetic = new AddOrUpdateCustomCharacterData()
             {
                 CharacterName = CharacterName,
-                CustomFieldName = "CharacterMeshType",
-                FieldValue = Mesh
+                CustomFieldName = "CosmeticCharacterData",
+                FieldValue = CosmeticCharacterData
             };
 
-            AddOrUpdateCustomCharacterData addOrUpdateCustomCharacterDataHair = new AddOrUpdateCustomCharacterData()
-            {
-                CharacterName = CharacterName,
-                CustomFieldName = "CharacterHairType",
-                FieldValue = Hair
-            };
-
-            await charactersRepository.AddOrUpdateCustomCharacterData(customerGUID, addOrUpdateCustomCharacterDataMesh);
-
-            await charactersRepository.AddOrUpdateCustomCharacterData(customerGUID, addOrUpdateCustomCharacterDataHair);
-
-
+            await charactersRepository.AddOrUpdateCustomCharacterData(customerGUID, addOrUpdateCustomCharacterDataCosmetic);
 
             output.Success = true;
                 output.ErrorMessage = "";
