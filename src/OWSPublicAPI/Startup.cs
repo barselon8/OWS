@@ -186,7 +186,7 @@ namespace OWSPublicAPI
             }
 
             container.Register<IPublicAPIInputValidation, DefaultPublicAPIInputValidation>(Lifestyle.Singleton);
-            container.Register<ICustomCharacterDataSelector, DefaultCustomCharacterDataSelector>(Lifestyle.Singleton);
+            container.Register<ICustomCharacterDataSelector, PRCustomCharacterDataSelector>(Lifestyle.Singleton);
             container.Register<IGetReadOnlyPublicCharacterData, DefaultGetReadOnlyPublicCharacterData>(Lifestyle.Singleton);
             container.Register<IHeaderCustomerGUID, HeaderCustomerGUID>(Lifestyle.Scoped);
 

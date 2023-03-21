@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OWSShared.Interfaces
 {
-    public class MyGameCustomCharacterDataSelector : ICustomCharacterDataSelector
+    public class PRCustomCharacterDataSelector : ICustomCharacterDataSelector
     {
         public bool ShouldExportThisCustomCharacterDataField(string fieldName)
         {
