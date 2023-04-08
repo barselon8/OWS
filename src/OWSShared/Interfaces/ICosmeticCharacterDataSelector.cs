@@ -10,9 +10,7 @@ namespace OWSShared.Interfaces
     {
         public bool ShouldExportThisCustomCharacterDataField(string fieldName)
         {
-            if (fieldName == "CosmeticCharacterData"
-                || fieldName == "Level"
-                || fieldName == "Class")
+            if (fieldName == "CosmeticCharacterData")
             {
                 return true;
             }
