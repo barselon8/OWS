@@ -10,6 +10,7 @@ using OWSData.Models.Composites;
 using OWSData.Models.StoredProcs;
 using OWSData.Repositories.Interfaces;
 using OWSData.SQL;
+using OWSShared.Options;
 
 namespace OWSData.Repositories.Implementations.Postgres
 {
@@ -131,6 +132,10 @@ namespace OWSData.Repositories.Implementations.Postgres
                 parameter.Add("@ServerStatus", 0);
 
                 await Connection.ExecuteAsync(GenericQueries.RemoveAllCharactersFromAllInstancesByWorldID,
+                    parameter,
+                    commandType: CommandType.Text);
+
+                await Connection.ExecuteAsync(GenericQueries.RemoveAllMapInstancesForWorldServer,
                     parameter,
                     commandType: CommandType.Text);
 
